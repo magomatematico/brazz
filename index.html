@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-V0N3WWWQ7V"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-V0N3WWWQ7V');
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: data: blob:; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; frame-src *; connect-src *;">
+  <meta name="description" content="Brazz Club - A melhor banca online para jogos e promoções. Junte-se à Banca Brazz Club e aproveite bônus incríveis!">
+  <meta name="keywords" content="Brazz Club, Banca Brazz Club, banca online, jogos online, promotoria Brazz Club">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Brazz Club">
+  <meta property="og:title" content="Brazz Club - A Melhor Banca Online">
+  <meta property="og:description" content="Descubra a Banca Brazz Club, sua plataforma de jogos online com bônus incríveis e suporte dedicado. Junte-se agora!">
+  <meta property="og:url" content="https://brazclub.com">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://brazclub.com/images/og-image.jpg">
+  <title>Brazz Club - Banca Brazz Club: A Melhor Banca Online</title>
+  <link rel="icon" href="brazz.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body, html {
+      font-family: 'Roboto', sans-serif;
+      background: #f4f6f8;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      color: #1a1a1a;
+      overflow-x: hidden;
+    }
+    header {
+      background: linear-gradient(135deg, #000000, #000000);
+      display: flex;
+      align-items: center;
+      padding: 10px 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      height: 50px;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 10;
+    }
+    header img {
+      height: 35px;
+      margin-right: 10px;
+      transition: transform 0.3s ease;
+    }
+    header img:hover {
+      transform: rotate(10deg) scale(1.1);
+    }
+    header h1 {
+      font-size: 18px;
+      font-weight: 600;
+      color: #fff;
+      letter-spacing: 1px;
+    }
+    #main-content {
+      flex: 1;
+      margin-top: 50px;
+      margin-bottom: 60px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+    }
+    #brazz, #suporte, #promotoria {
+      width: 100%;
+      height: 100%;
+      transition: opacity 0.5s ease-in-out, transform 0.3s ease;
+    }
+    #suporte, #promotoria {
+      padding: 16px;
+      max-width: 600px;
+      margin: 0 auto;
+      display: none;
+    }
+    #suporte-content, #promotoria-content {
+      padding: 16px;
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+      width: 100%;
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    }
+    #suporte-content.visible, #promotoria-content.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    #promotoria-content img {
+      width: 100%;
+      max-height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 16px;
+    }
+    #promotoria-content h2 {
+      font-size: 20px;
+      margin-bottom: 12px;
+      color: #1a1a1a;
+    }
+    #promotoria-content p {
+      font-size: 16px;
+      margin-bottom: 12px;
+      color: #333;
+    }
+    #promotoria-content .card {
+      background: #f9f9f9;
+      padding: 16px;
+      border-radius: 8px;
+      margin-bottom: 16px;
+    }
+    #promotoria-content .card h3 {
+      font-size: 18px;
+      margin-bottom: 12IKE: 12px;
+      color: #1a1a1a;
+    }
+    #promotoria-content .card input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+    #promotoria-content .card button {
+      background: #25D366;
+      color: #fff;
+      border: none;
+      padding: 10px;
+      width: 100%;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    #promotoria-content .card button:hover {
+      background: #1EBE55;
+    }
+    #promotoria-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 16px;
+    }
+    #promotoria-content table th, #promotoria-content table td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+      font-size: 14px;
+    }
+    #promotoria-content table th {
+      background: #f1f1f1;
+      font-weight: 600;
+    }
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+      border-radius: 10px;
+    }
+    footer {
+      background: linear-gradient(135deg, #000000, #000000);
+      display: flex;
+      flex-direction: column;
+      padding: 10px;
+      border-top: 2px solid #e0e6ec;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      height: 60px;
+      box-shadow: 0 -4px 12px rgba(0,0,0,0.1);
+      z-index: 10;
+      gap: 6px;
+    }
+    .footer-bar {
+      background: linear-gradient(135deg, #7bbdff, #1a3c5e);
+      height: 20px;
+      width: 100%;
+      position: fixed;
+      bottom: -20px;
+      z-index: 9;
+    }
+    footer .row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 48px;
+      gap: 4px;
+    }
+    footer button {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      font-size: 14px;
+      font-weight: 500;
+      color: #fff;
+      cursor: pointer;
+      padding: 4px;
+      border-radius: 8px;
+      transition: all 0.3s;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+      flex: 1;
+      justify-content: center;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+    footer button.selected {
+      background: rgba(255, 255, 255, 0.3);
+      font-weight: 600;
+    }
+    footer button img {
+      height: 28px;
+      width: 28px;
+    }
+    footer button i {
+      font-size: 28px;
+    }
+    footer button:hover {
+      background: rgba(255, 255, 255, 0.2);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+    footer button:active {
+      transform: scale(0.95);
+    }
+    #notification {
+      position: fixed;
+      top: 60px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #d3d3d3;
+      color: #1a1a1a;
+      padding: 15px 25px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      z-index: 100;
+      font-size: 18px;
+      text-align: center;
+      max-width: 90%;
+      display: none;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+    #notification button {
+      background: rgba(255, 255, 255, 0.9);
+      color: #1a1a1a;
+      border: 1px solid #ccc;
+      padding: 8px 16px;
+      margin-left: 10px;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    #notification button:hover {
+      background: #ffffff;
+    }
+    @media (max-width: 768px) {
+      header {
+        padding: 8px 15px;
+      }
+      header img {
+        height: 30px;
+      }
+      header h1 {
+        font-size: 16px;
+      }
+      #main-content {
+        margin-top: 50px;
+        margin-bottom: 60px;
+      }
+      #suporte, #promotoria {
+        padding: 12px;
+      }
+      #suporte-content, #promotoria-content {
+        max-width: 100%;
+      }
+      footer {
+        padding: 6px;
+        height: 60px;
+        bottom: 0;
+      }
+      .footer-bar {
+        height: 20px;
+        bottom: -20px;
+      }
+      footer .row {
+        height: 40px;
+      }
+      footer button {
+        font-size: 12px;
+        padding: 4px;
+      }
+      footer button img {
+        height: 24px;
+        width: 24px;
+      }
+      footer button i {
+        font-size: 24px;
+      }
+      #notification {
+        font-size: 16px;
+        padding: 12px 20px;
+      }
+      #notification button {
+        font-size: 14px;
+        padding: 6px 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="brazz.png" alt="Logo Brazz Club">
+    <h1>Brazz Club</h1>
+  </header>
+
+  <div id="notification" style="opacity: 0; display: none;">
+    <span>Seja promotor e Lucre com a gente!</span>
+    <button onclick="openWhatsApp()">Aperte aqui</button>
+  </div>
+
+  <div id="main-content">
+    <section id="brazz">
+      <iframe allow="clipboard-read; clipboard-write" src="https://app.brazz.club/pr/oC7VMz8A" loading="lazy" sandbox="allow-scripts allow-same-origin allow-clipboard-write" title="Plataforma de Jogos Brazz Club"></iframe>
+    </section>
+    <section id="suporte" class="hidden">
+      <div id="suporte-content">
+        <h2>Suporte Brazz Club</h2>
+        <p>Precisa de ajuda? Entre em contato com o suporte da <strong>Banca Brazz Club</strong> via WhatsApp. Estamos prontos para ajudar!</p>
+      </div>
+    </section>
+    <section id="promotoria" class="hidden">
+      <div id="promotoria-content">
+        <img src="prom.png" alt="Promotoria Brazz Club">
+        <Promotoria Brazz Club>
+        <p>Seja um promotor da <strong>Banca Brazz Club</strong> e lucre com comissões incríveis! Ganhe 7% no Jb e 10% no cassino.</p>
+        <div class="card">
+          <h3>Seja Promotor da Brazz Club</h3>
+          <input type="text" id="nome" placeholder="Nome" required aria-label="Nome do Promotor">
+          <input type="tel" id="telefone" placeholder="Telefone" required aria-label="Telefone do Promotor">
+          <button onclick="enviarPromotor()">Enviar</button>
+        </div>
+        <p>Nossa plataforma oferece bônus incríveis para jogadores:</p>
+        <ul>
+          <li>30% de bônus para novos cadastros na primeira recarga até R$200.</li>
+          <li>20% de bônus nos dias de federais.</li>
+          <li>15% de bônus em dias normais.</li>
+        </ul>
+        <h3>Cotação da Banca Brazz Club</h3>
+        <table>
+          <tr><th>Tipo</th><th>Valor (R$)</th></tr>
+          <tr><td>Unidade</td><td>8,00</td></tr>
+          <tr><td>Grupo</td><td>20,00</td></tr>
+          <tr><td>Dezena</td><td>80,00</td></tr>
+          <tr><td>Centena</td><td>800,00</td></tr>
+          <tr><td>Milhar</td><td>8.000,00</td></tr>
+          <tr><td>Duque GP</td><td>180,00</td></tr>
+          <tr><td>Terno GP</td><td>1.500,00</td></tr>
+          <tr><td>Quadra GP</td><td>1.000,00</td></tr>
+          <tr><td>Quina GP (8/5)</td><td>1.000,00</td></tr>
+          <tr><td>Sena GP (10/6)</td><td>1.000,00</td></tr>
+          <tr><td>Duque Dez</td><td>300,00</td></tr>
+          <tr><td>Terno Dez Seco</td><td>10.000,00</td></tr>
+          <tr><td>Terno Dez</td><td>5.000,00</td></tr>
+          <tr><td>Passe Vai</td><td>90,00</td></tr>
+          <tr><td>Passe Vai Vem</td><td>45,00</td></tr>
+        </table>
+      </div>
+    </section>
+  </div>
+  <footer>
+    <div class="row">
+      <button onclick="mostrar('brazz')" class="selected">
+        <img src="brazz.png" alt="Brazz Club">
+        Brazz Club
+      </button>
+      <button onclick="mostrar('suporte')">
+        <i class="fab fa-whatsapp"></i>
+        Suporte
+      </button>
+      <button onclick="mostrar('promotoria')">
+        <i class="fas fa-user-tie"></i>
+        Promotoria
+      </button>
+    </div>
+    <p style="text-align: center; color: #fff; font-size: 12px; margin-top: 5px;">© 2025 Brazz Club - Todos os direitos reservados</p>
+  </footer>
+  <div class="footer-bar"></div>
+
+  <script>
+    function mostrar(id) {
+      const brazz = document.getElementById('brazz');
+      const suporte = document.getElementById('suporte');
+      const promotoria = document.getElementById('promotoria');
+      const promotoriaContent = document.getElementById('promotoria-content');
+
+      if (id === 'suporte') {
+        window.open('https://wa.me/5583993110329?text=Ol%C3%A1%2C%20Suporte%20Brazz%20Club.%20Preciso%20de%20ajuda%21', '_blank');
+        return;
+      }
+
+      brazz.style.display = id === 'brazz' ? 'block' : 'none';
+      suporte.style.display = id === 'suporte' ? 'block' : 'none';
+      promotoria.style.display = id === 'promotoria' ? 'block' : 'none';
+
+      if (id === 'promotoria' && promotoriaContent) {
+        setTimeout(() => {
+          promotoriaContent.classList.add('visible');
+        }, 100);
+      }
+
+      document.querySelectorAll('footer button').forEach(button => {
+        button.classList.remove('selected');
+        if (button.getAttribute('onclick') === `mostrar('${id}')`) {
+          button.classList.add('selected');
+        }
+      });
+    }
+
+    function enviarPromotor() {
+      const nome = document.getElementById('nome').value;
+      const telefone = document.getElementById('telefone').value;
+
+      if (nome && telefone) {
+        const mensagem = `Nome: ${nome}%0ATelefone: ${telefone}%0AInteresse: Promotoria Brazz Club`;
+        const url = `https://wa.me/5583993110329?text=${mensagem}`;
+        window.open(url, '_blank');
+        document.getElementById('nome').value = '';
+        document.getElementById('telefone').value = '';
+      } else {
+        alert('Por favor, preencha todos os campos.');
+      }
+    }
+
+    function openWhatsApp() {
+      window.open('https://wa.me/5583993110329?text=Ol%C3%A1%2C%20quero%20ser%20promotor%20da%20Brazz%20Club%21', '_blank');
+    }
+
+    function showNotification() {
+      const notification = document.getElementById('notification');
+      notification.style.display = 'flex';
+      notification.style.opacity = '1';
+      setTimeout(() => {
+        notification.style.opacity = '0';
+        setTimeout(() => {
+          notification.style.display = 'none';
+        }, 500);
+      }, 10000);
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      mostrar('brazz');
+      showNotification();
+    });
+  </script>
+</body>
+</html>
